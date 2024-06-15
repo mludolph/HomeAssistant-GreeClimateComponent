@@ -415,7 +415,7 @@ class GreeClimate(ClimateEntity):
             _LOGGER.info('HA target temp set according to HVAC state to: ' + str(self._acOptions['SetTem']))
 
     def UpdateHACurrentTemperature(self):
-        self._current_temperature = self._acOptions['TemSen']
+        self._current_temperature = self._acOptions['TemSen'] - 40
         _LOGGER.info('HA current temp set according to HVAC state to: ' + str(self._acOptions['TemSen']))
         
     def UpdateHAOptions(self):
